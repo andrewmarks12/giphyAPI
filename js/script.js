@@ -18,6 +18,10 @@ async function getGif() {
     img.src = gifUrl;
 }
 
-
+document.getElementById("fetch-gif-btn").addEventListener("click", () => {
+    const searchInput = document.getElementById("search-input").value.trim();
+    const searchTerm = searchInput !== "" ? searchInput : "hockey";
+    getGif(searchTerm);
+});
 
 getGif();
